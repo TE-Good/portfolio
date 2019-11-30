@@ -1,0 +1,54 @@
+/* WEBSITE WIDE */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* LANDING SECTION */
+.landing-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SECOND SECTION */
+.second-wrapper {
+  width: 100vw;
+  height: 50vh;
+  background: grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROJECTS SECTION */
+.projects-wrapper {
+  width: 100vw;
+  height: 200vh;
+  background: green;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.projects-title {
+  width: 100vw;
+  height: 30vh;
+  border: blue dashed 2px;
+}
+.projects-card {
+  width: 100vw;
+  height: 50vh;
+  border: red dashed 2px;
+}
+.projects-foot {
+  width: 100vw;
+  height: 20vh;
+  border: blue dashed 2px;
+}
