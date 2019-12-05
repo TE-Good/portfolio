@@ -1,30 +1,125 @@
 /* WEBSITE WIDE */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* LANDING SECTION */
 .landing-wrapper {
   width: 100vw;
   height: 100vh;
-  background: red;
+  background: #F7FFF7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-h1 {
+  font-size: 800%;
+  transform: translateX(-70px);
+  /* color: #292F36; */
+  border: 1px blue solid;
+}
+
+.landing-line {
+  height: 3px;
+  /* width: 200px; */
+  width: 700px;
+  background: #292F36;
+}
+
+.landing-h3 {
+  margin-top: 20px;
+  font-size: 200%;
+  color: #333533;
+  transform: translateX(230px);
+  border: 1px blue solid;
+}
+
+/* SECOND SECTION */
+.second-wrapper {
+  width: 100vw;
+  height: 80vh;
+  /* background: #00030F; */
+  background: #292F36;
+  color: #F7FFF7;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* SECOND SECTION */
-.second-wrapper {
-  width: 100vw;
-  height: 50vh;
-  background: grey;
+.first-card {
+  width: 40vw;
+  height: 70vh;
+  border: green 2px solid;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.card-one {
+  border: 2px green solid;
+  height: 20vh;
+  width: 100%;
+  font-size: 200%;
+}
+
+.card-one-line {
+  height: 3px;
+  width: 300px;
+  background: white;
+}
+
+.card-two {
+  height: 50vh;
+  width: 100%;
+  border: 2px blue solid;
+  font-size: 200%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second-card {
+  width: 40vw;
+  height: 70vh;
+  font-size: 170%;
+  text-align: center;
+  border: green 2px solid;
+  font-family: 'Lato', sans-serif;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icon-square {
+  height: 100px;
+  width: 100px;
+  background: #F7FFF7;
+  margin: 20px;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-square > i {
+  color: #292F36;
+  font-size: 330%;
 }
 
 /* PROJECTS SECTION */
