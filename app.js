@@ -4,27 +4,37 @@ window.addEventListener('DOMContentLoaded', () => {
   // const projectTitle = document.querySelector('.project1')
   const projectNav = document.querySelector('.project-titles')
 
+
+  const websiteHeight = document.querySelector('body').scrollHeight
+  console.log(websiteHeight)
+  const scrollHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+  )
+  
   // targetting cards
   const startingTitles = document.querySelectorAll('.startingTitle')
   const projectCards = document.querySelectorAll('.project-card')
   console.log(startingTitles)
-
+  
   startingTitles[0].classList.remove('hidden')
   projectCards[0].classList.add('hidden')
-
+  
   window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
+    const pagePercentageScrolled = (window.scrollY + document.body.offsetHeight) / scrollHeight
+    // console.log(window.pageYOffset)
+    console.log(pagePercentageScrolled)
+    // console.log(window.scrollY)
     // if (window.scrollY >= 753) {
+    // NAVBAR FIXED POSITION
     if (window.scrollY >= 829) {
-      // console.log('fix')
-      // projectTitle.classList.add('fixed-title')
       projectNav.classList.add('fixed-nav')
     } else {
-      // console.log('unfix')
-      // projectTitle.classList.remove('fixed-title')
       projectNav.classList.remove('fixed-nav')
     }
-    if (window.scrollY >= 674) {
+    // PROJECT CARD FADES
+    if (pagePercentageScrolled >= 0.44) {
       startingTitles[0].classList.add('fadeOut')
       setTimeout(() => {
         startingTitles[0].classList.add('hidden')
@@ -32,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
         projectCards[0].classList.add('fadeIn')
       }, 400)
     }
-    if (window.scrollY >= 1300) {
+    if (pagePercentageScrolled >= 0.60) {
       startingTitles[1].classList.add('fadeOut')
       setTimeout(() => {
         startingTitles[1].classList.add('hidden')
@@ -40,7 +50,7 @@ window.addEventListener('DOMContentLoaded', () => {
         projectCards[1].classList.add('fadeIn')
       }, 400)
     }
-    if (window.scrollY >= 1900) {
+    if (pagePercentageScrolled >= 0.80) {
       startingTitles[2].classList.add('fadeOut')
       setTimeout(() => {
         startingTitles[2].classList.add('hidden')
@@ -48,7 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
         projectCards[2].classList.add('fadeIn')
       }, 400)
     }
-    if (window.scrollY >= 2500) {
+    if (pagePercentageScrolled >= 0.96) {
       startingTitles[3].classList.add('fadeOut')
       setTimeout(() => {
         startingTitles[3].classList.add('hidden')
