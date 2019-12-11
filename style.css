@@ -20,6 +20,7 @@
 
 body, html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /* LANDING SECTION */
@@ -150,9 +151,17 @@ body, html {
   background: #DD1C1A;
 }
 
-.project-titles > h4 {
+.project-titles > a {
   background: none;
+  text-decoration: none;
+  color: black;
+}
+.project-titles > a:hover {
+  color: white;
+}
 
+.project-card-container-wrapper {
+  background: red;
 }
 
 .project-card-container {
@@ -207,7 +216,7 @@ body, html {
   align-items: center;
 }
 
-.project-image-links > div {
+.project-image-links > a {
   /* background: #DD1C1A; */
   height: 50%;
   width: 30%;
@@ -217,20 +226,22 @@ body, html {
   border: 1px black solid;
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
-.project-image-links > div:hover {
+.project-image-links > a:hover {
   color: #DD1C1A;
 }
 
-.project-image-links > div > i {
+.project-image-links > a > i {
   margin-right: 10%;
   font-size: 200%;
   background: none;
   /* color: white; */
 }
 
-.project-image-links > div > h5 {
+.project-image-links > a > h5 {
   /* color: white; */
   background: none;
 }
@@ -259,6 +270,19 @@ body, html {
 
 .project-title-underline {
   width: 200px;
+  height: 2px;
+  background: #DD1C1A;
+  margin-left: 10%;
+}
+
+.project-title-underline-flash {
+  width: 280px;
+  height: 2px;
+  background: #DD1C1A;
+  margin-left: 10%;
+}
+.project-title-underline-tech {
+  width: 240px;
   height: 2px;
   background: #DD1C1A;
   margin-left: 10%;

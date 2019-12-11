@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/d70b989e24.js" crossorigin="anonymous"></script>
   <script src="./app.js"></script>
   <title>Thomas Good</title>
 </head>
+
 <body>
   <!-- <div class="landing-wrapper animated fadeInUp"> -->
   <div class="landing-wrapper">
@@ -19,7 +22,7 @@
       <div class="landing-line"></div>
       <h3 class="landing-h3">Full Stack Software Engineer</h3>
       <p>Hi. Welcome to my website. See below for my projects!</p>
-      
+
       <div class="icon-square"><i class="devicon-github-plain"></i></div>
       <div class="icon-square"><i class="fab fa-linkedin"></i></div>
     </div>
@@ -36,12 +39,13 @@
       <h2>Projects</h2>
     </div>
     <div class="project-titles">
-      <h4 class="">Pacman</h4>
-      <h4>Flash Films</h4>
-      <h4>Tech Talk</h4>
-      <h4>Whatify</h4>
+      <a href="#project1" class="">Pacman</a>
+      <a href="#project2">Flash Films</a>
+      <a href="#project3">Tech Talk</a>
+      <a href="#project4">Whatify</a>
     </div>
-    <div class="project-card-container">
+    <div class="project-card-container-wrapper"></div>
+    <div id="project1" class="project-card-container">
       <p class="hidden">pacman</p>
       <div class="project-card">
         <div class="project-text">
@@ -50,7 +54,8 @@
             <div class="project-title-underline"></div>
           </div>
           <div class="project-text-main">
-            <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo project was created in 7 days.</p>
+            <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo
+              project was created in 7 days.</p>
           </div>
           <div class="project-text-tech">
             <i class="devicon-html5-plain-wordmark"></i>
@@ -60,39 +65,146 @@
           </div>
         </div>
         <div class="project-image">
-            <div class="project-image-container">
-              <img src="https://i.imgur.com/xcLcVuO.jpg" alt="stage 2">
-            </div>
-            <div class="project-image-links">
-              <div>
-                <i class="devicon-github-plain"></i>
-                <h5>Github</h5>
-              </div>
-              <div>
-                <i class="devicon-github-plain"></i>
-                <h5>Deployment</h5>
-              </div>
-            </div>
+          <div class="project-image-container">
+            <img src="https://i.imgur.com/xcLcVuO.jpg" alt="stage 2">
           </div>
-        
+          <div class="project-image-links">
+
+            <a href="https://github.com/TE-Good/pacman">
+              <i class="devicon-github-plain"></i>
+              <h5>Github</h5>
+            </a>
+            </a>
+            <a href="https://te-good.github.io/pacman/">
+              <i class="devicon-github-plain"></i>
+              <h5>Deployment</h5>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="project-card-container">
-      <p>Flash Films</p>
+    <div id="project2" class="project-card-container">
+      <p class="hidden">Flash Films</p>
+      <div class="project-card">
+          <div class="project-text">
+            <div class="project-text-title">
+              <h4>Flash Films</h4>
+              <div class="project-title-underline-flash"></div>
+            </div>
+            <div class="project-text-main">
+              <p>Film search engine based on actors and genres. During a 48 hour paired-hackathon, using a third-party RESTful API, we created a React.js front end to receive the data and display it.</p>
+            </div>
+            <div class="project-text-tech">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-git-plain"></i>
+            </div>
+          </div>
+          <div class="project-image">
+            <div class="project-image-container">
+              <img src="https://i.imgur.com/GGFJdze.jpg" alt="stage 2">
+            </div>
+            <div class="project-image-links">
+              <a href="https://github.com/TE-Good/flash-films">
+                <i class="devicon-github-plain"></i>
+                <h5>Github</h5>
+              </a>
+              </a>
+              <a href="https://flash-films.herokuapp.com/">
+                <i class="devicon-heroku-plain"></i>
+                <h5>Deployment</h5>
+              </a>
+            </div>
+          </div>
+        </div>
     </div>
-    
+    <div id="project3" class="project-card-container">
+      <p class="hidden">Tech Talk</p>
+      <div class="project-card">
+          <div class="project-text">
+            <div class="project-text-title">
+              <h4>Tech Talk</h4>
+              <div class="project-title-underline-tech"></div>
+            </div>
+            <div class="project-text-main">
+              <p>Collaborating in a group of 4, across a 7 day project; we created a website around technology meet-ups. This included creating a RESTful back end using Node.js, Express, and MongoDB, and a React front end.</p>
+            </div>
+            <div class="project-text-tech">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-git-plain"></i>
+            </div>
+          </div>
+          <div class="project-image">
+            <div class="project-image-container">
+              <img src="https://i.imgur.com/nzBDMi1.jpg" alt="stage 2">
+            </div>
+            <div class="project-image-links">
+              <a href="https://github.com/TE-Good/tech-talk">
+                <i class="devicon-github-plain"></i>
+                <h5>Github</h5>
+              </a>
+              </a>
+              <a href="https://tecktalk.herokuapp.com/">
+                <i class="devicon-github-plain"></i>
+                <h5>Deployment</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="project4" class="project-card-container">
+      <p class="hidden">Whatify</p>
+      <div class="project-card">
+          <div class="project-text">
+            <div class="project-text-title">
+              <h4>Whatify</h4>
+              <div class="project-title-underline"></div>
+            </div>
+            <div class="project-text-main">
+              <p>A music quiz game using Spotify's API and user created data to make games custom to the player. Whatify was created by a 3 person team across a week, and utilises JavaScript, React, Python, Django, PostgreSQL and Heroku. </p>
+            </div>
+            <div class="project-text-tech">
+              <i class="devicon-html5-plain-wordmark"></i>
+              <i class="devicon-css3-plain-wordmark"></i>
+              <i class="devicon-javascript-plain"></i>
+              <i class="devicon-git-plain"></i>
+            </div>
+          </div>
+          <div class="project-image">
+            <div class="project-image-container">
+              <img src="https://i.imgur.com/1bYPzjF.jpg" alt="stage 2">
+            </div>
+            <div class="project-image-links">
+              <a href="https://github.com/TE-Good/whatify">
+                <i class="devicon-github-plain"></i>
+                <h5>Github</h5>
+              </a>
+              </a>
+              <a href="http://www.whatify.me/">
+                <i class="devicon-github-plain"></i>
+                <h5>Deployment</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
   </div>
 </body>
+
 </html>
 
- <!-- <div class="icons">
+<!-- <div class="icons">
     <div class="icons-wrapper"> -->
-      <!-- <h2>Howdy</h2>
+<!-- <h2>Howdy</h2>
       <p>Welcome to my website. See below for my projects!</p>
       <p>If you want to contact me;</p>
       <div class="icon-square"><i class="devicon-github-plain"></i></div>
       <div class="icon-square"><i class="fab fa-linkedin"></i></div> -->
-      <!-- <div class="icon-square"><i class="devicon-html5-plain-wordmark"></i></div>
+<!-- <div class="icon-square"><i class="devicon-html5-plain-wordmark"></i></div>
       <div class="icon-square"><i class="devicon-css3-plain-wordmark"></i></div>
       <div class="icon-square"><i class="devicon-javascript-plain"></i></div>
       <div class="icon-square"><i class="devicon-react-original"></i></div>
@@ -105,5 +217,5 @@
       <div class="icon-square"><i class="devicon-sass-original"></i></div>
       <div class="icon-square"><i class="devicon-heroku-plain-wordmark"></i></div>
       <div class="icon-square"><i class="devicon-webpack-plain-wordmark"></i></div> -->
-    <!-- </div>
+<!-- </div>
   </div> -->
