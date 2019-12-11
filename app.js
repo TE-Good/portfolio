@@ -1,12 +1,12 @@
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('hello world')
+  // console.log('hello world')
 
   // const projectTitle = document.querySelector('.project1')
   const projectNav = document.querySelector('.project-titles')
 
 
-  const websiteHeight = document.querySelector('body').scrollHeight
-  console.log(websiteHeight)
+  // const websiteHeight = document.querySelector('body').scrollHeight
+  // console.log(websiteHeight)
   const scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
     document.body.offsetHeight, document.documentElement.offsetHeight,
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // targetting cards
   const startingTitles = document.querySelectorAll('.startingTitle')
   const projectCards = document.querySelectorAll('.project-card')
-  console.log(startingTitles)
+  // console.log(startingTitles)
   
   startingTitles[0].classList.remove('hidden')
   projectCards[0].classList.add('hidden')
@@ -24,11 +24,10 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     const pagePercentageScrolled = (window.scrollY + document.body.offsetHeight) / scrollHeight
     // console.log(window.pageYOffset)
-    console.log(pagePercentageScrolled)
     // console.log(window.scrollY)
-    // if (window.scrollY >= 753) {
+    // console.log(pagePercentageScrolled)
     // NAVBAR FIXED POSITION
-    if (window.scrollY >= 829) {
+    if (pagePercentageScrolled >= 0.4726) {
       projectNav.classList.add('fixed-nav')
     } else {
       projectNav.classList.remove('fixed-nav')
