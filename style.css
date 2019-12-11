@@ -80,7 +80,19 @@ body, html {
   /* width: 200px; */
   width: 700px;
   /* background: #292F36; */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.landing-line > div {
   background: #DD1C1A;
+  width: 100%;
+  height: 100%;
+
+}
+
+.landing-h3-wrapper {
+  height: 5vh;
 }
 
 .landing-h3 {
@@ -90,6 +102,11 @@ body, html {
   color: #DD1C1A;
   transform: translateX(230px);
   /* border: 1px blue solid; */
+}
+
+.landing-text-wrapper {
+  margin-top: 10vh;
+  height: 10vh;
 }
 
 .divider {
@@ -114,6 +131,7 @@ body, html {
 
 .landing-links {
   /* border: red 1px solid; */
+  height: 10vh;
   width: 20%;
   display: flex;
   justify-content: space-between;

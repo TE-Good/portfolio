@@ -10,7 +10,40 @@ window.addEventListener('DOMContentLoaded', () => {
   
   // NAV TITLES
   const navTitles = document.querySelectorAll('.nav-title-underline')
-  console.log(navTitles)
+
+  // LANDING UNDERLINE
+  const landingUnderline = document.getElementById('landing-inner-line')
+  // LANDING H3
+  const landingH3 = document.querySelector('.landing-h3')
+  const landingText = document.querySelector('.landing-text')
+  const landingIcon = document.querySelectorAll('.landing-icon')
+
+  // for (let i = 0; i < 100; i++) {
+  //   console.log(i)
+  //   setTimeout(() => {
+  //     i += 1
+  //   }, 1000)
+  // }
+  let i = 0
+  const countTo100 = setInterval(() => {
+    console.log(i)
+    if (i === 100) {
+      clearInterval(countTo100)
+      landingText.classList.remove('hidden')
+      landingText.classList.add('fadeIn')
+      landingIcon[0].classList.remove('hidden')
+      landingIcon[0].classList.add('fadeIn')
+      landingIcon[1].classList.remove('hidden')
+      landingIcon[1].classList.add('fadeIn')
+    }
+    if (i === 50) {
+      landingH3.classList.remove('hidden')
+      landingH3.classList.add('fadeIn')
+    }
+    i += 1
+    landingUnderline.style.width = `${i}%`
+  }, 15)
+
   
   
   // FINDING MAX HEIGHT OF ANY BROWSER
@@ -24,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const pagePercentageScrolled = Number(((window.scrollY + document.body.offsetHeight) / scrollHeight).toFixed(3))
     // console.log(window.pageYOffset)
     // console.log(window.scrollY)
-    console.log('page percentage:', pagePercentageScrolled)
+    // console.log('page percentage:', pagePercentageScrolled)
 
     // NAVBAR FIXED POSITION
     if (pagePercentageScrolled >= 0.472) {
