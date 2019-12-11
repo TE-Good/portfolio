@@ -18,12 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const landingText = document.querySelector('.landing-text')
   const landingIcon = document.querySelectorAll('.landing-icon')
 
-  // for (let i = 0; i < 100; i++) {
-  //   console.log(i)
-  //   setTimeout(() => {
-  //     i += 1
-  //   }, 1000)
-  // }
   let i = 0
   const countTo100 = setInterval(() => {
     console.log(i)
