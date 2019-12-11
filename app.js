@@ -1,37 +1,38 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // console.log('hello world')
+  console.log('script loaded')
 
-  // const projectTitle = document.querySelector('.project1')
+  // NAVBAR
   const projectNav = document.querySelector('.project-titles')
-
-
-  // const websiteHeight = document.querySelector('body').scrollHeight
-  // console.log(websiteHeight)
+  
+  // PROJECT CARDS
+  const startingTitles = document.querySelectorAll('.startingTitle')
+  const projectCards = document.querySelectorAll('.project-card')
+  
+  // NAV TITLES
+  const navTitles = document.querySelectorAll('.project-nav-title')
+  console.log(navTitles)
+  
+  
+  // FINDING MAX HEIGHT OF ANY BROWSER
   const scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
     document.body.offsetHeight, document.documentElement.offsetHeight,
     document.body.clientHeight, document.documentElement.clientHeight
   )
   
-  // targetting cards
-  const startingTitles = document.querySelectorAll('.startingTitle')
-  const projectCards = document.querySelectorAll('.project-card')
-  // console.log(startingTitles)
-  
-  startingTitles[0].classList.remove('hidden')
-  projectCards[0].classList.add('hidden')
-  
   window.addEventListener('scroll', () => {
-    const pagePercentageScrolled = (window.scrollY + document.body.offsetHeight) / scrollHeight
+    const pagePercentageScrolled = Number(((window.scrollY + document.body.offsetHeight) / scrollHeight).toFixed(3))
     // console.log(window.pageYOffset)
     // console.log(window.scrollY)
-    // console.log(pagePercentageScrolled)
+    console.log('page percentage:', pagePercentageScrolled)
+
     // NAVBAR FIXED POSITION
-    if (pagePercentageScrolled >= 0.4726) {
+    if (pagePercentageScrolled >= 0.472) {
       projectNav.classList.add('fixed-nav')
     } else {
       projectNav.classList.remove('fixed-nav')
     }
+
     // PROJECT CARD FADES
     if (pagePercentageScrolled >= 0.44) {
       startingTitles[0].classList.add('fadeOut')
@@ -65,6 +66,14 @@ window.addEventListener('DOMContentLoaded', () => {
         projectCards[3].classList.add('fadeIn')
       }, 400)
     }
+
+    //NAV TITLE COLORS
+    switch (pagePercentageScrolled) {
+      case 0.40:
+        navTitles[0].classList.add('white')
+        // break;
+    }
+
   })
 
 

@@ -102,7 +102,8 @@ body, html {
 
 .line {
   height: 3px;
-  width: 90vw;
+  /* width: 90vw; */
+  width: 100vw;
   background: #292F36;
 }
 
@@ -354,49 +355,7 @@ body, html {
   height: 5vh;
 }
 
-
-/* .icons {
-  height: 80vh;
-  width: 100vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.icons-wrapper {
-  height: 80vh;
-  width: 80vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-} */
-
-/* PARALLAX */
-/* .parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.parallax__layer--base {
-  transform: translateZ(0);
-}
-.parallax__layer--back {
-  transform: translateZ(-1px);
-} */
-
+/* JS CLASSES */
 .fixed-title {
   position: fixed;
   top: 0;
@@ -407,7 +366,10 @@ body, html {
   top: 0;
   /* top: 10%; */
   z-index: 1;
-  
+}
+
+.white {
+  color: white;
 }
 
 .hidden {
