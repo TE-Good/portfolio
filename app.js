@@ -19,24 +19,34 @@ window.addEventListener('DOMContentLoaded', () => {
   const landingIcon = document.querySelectorAll('.landing-icon')
 
   let i = 0
-  const countTo100 = setInterval(() => {
-    console.log(i)
-    if (i === 100) {
-      clearInterval(countTo100)
-      landingText.classList.remove('hidden')
-      landingText.classList.add('fadeIn')
-      landingIcon[0].classList.remove('hidden')
-      landingIcon[0].classList.add('fadeIn')
-      landingIcon[1].classList.remove('hidden')
-      landingIcon[1].classList.add('fadeIn')
-    }
-    if (i === 50) {
-      landingH3.classList.remove('hidden')
-      landingH3.classList.add('fadeIn')
-    }
-    i += 1
-    landingUnderline.style.width = `${i}%`
-  }, 15)
+  setTimeout(() => {
+    const countTo100 = setInterval(() => {
+      console.log(i)
+      if (i >= 100) {
+        clearInterval(countTo100)
+      }
+      if (i >= 90) {
+        landingText.classList.remove('hidden')
+        landingText.classList.add('fadeIn')
+        landingIcon[0].classList.remove('hidden')
+        landingIcon[0].classList.add('fadeIn')
+        landingIcon[1].classList.remove('hidden')
+        landingIcon[1].classList.add('fadeIn')
+      }
+      if (i === 50) {
+        landingH3.classList.remove('hidden')
+        landingH3.classList.add('fadeIn')
+      }
+      if (i < 50) {
+        i += 1
+      } else if (i < 70) {
+        i += 0.8
+      } else if (i < 80) {
+        i += 0.6
+      } else i += 0.4
+      landingUnderline.style.width = `${i}%`
+    }, 15)
+  }, 300)
 
   
   
