@@ -160,6 +160,7 @@ body, html {
   justify-content: center;
   align-items: center;
   background: #DD1C1A;
+  /* color: #F7FFF7; */
 }
 .project-header > h2 {
   background: none;
@@ -307,12 +308,6 @@ body, html {
 
 .project-title-underline-flash {
   width: 280px;
-  height: 2px;
-  background: #DD1C1A;
-  margin-left: 10%;
-}
-.project-title-underline-tech {
-  width: 240px;
   height: 2px;
   background: #DD1C1A;
   margin-left: 10%;
