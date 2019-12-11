@@ -61,9 +61,10 @@ body, html {
 
 .grow { 
   transition: all .2s ease-in-out; 
+  /* transform: rotate(45deg); */
 }
 .grow:hover { 
-  transform: scale(1.1) rotate(45deg); 
+  transform: scale(1.1); 
 }
 
 
@@ -121,6 +122,11 @@ body, html {
   text-decoration: none;
   color: black;
 }
+
+.landing-links > a:hover {
+  color: #DD1C1A;
+}
+
 .landing-links > a > i {
   font-size: 400%;
 }
@@ -344,10 +350,17 @@ body, html {
 
 
 
+.anchor {
+  position: relative;
+  top: -100px;
+}
+
+.end {
+  height: 5vh;
+}
 
 
-
-.icons {
+/* .icons {
   height: 80vh;
   width: 100vw;
 
@@ -366,7 +379,7 @@ body, html {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-}
+} */
 
 /* PARALLAX */
 /* .parallax {

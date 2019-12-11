@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   console.log('hello world')
 
-  // const projectTitle = document.querySelector('.project-header')
+  // const projectTitle = document.querySelector('.project1')
   const projectNav = document.querySelector('.project-titles')
   console.log(projectNav)
 
