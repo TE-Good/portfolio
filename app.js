@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const projectCards = document.querySelectorAll('.project-card')
   
   // NAV TITLES
-  const navTitles = document.querySelectorAll('.project-nav-title')
+  const navTitles = document.querySelectorAll('.nav-title-underline')
   console.log(navTitles)
   
   
@@ -68,13 +68,35 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     //NAV TITLE COLORS
-    switch (pagePercentageScrolled) {
-      case 0.40:
+    switch (true) {
+      case pagePercentageScrolled > 0.40 && pagePercentageScrolled < 0.60:
+        removeWhiteClasses()
         navTitles[0].classList.add('white')
-        // break;
+        break
+      case pagePercentageScrolled > 0.60 && pagePercentageScrolled < 0.78:
+        removeWhiteClasses()
+        navTitles[1].classList.add('white')
+        break
+      case pagePercentageScrolled > 0.78 && pagePercentageScrolled < 0.97:
+        removeWhiteClasses()
+        navTitles[2].classList.add('white')
+        break
+      case pagePercentageScrolled > 0.97:
+        removeWhiteClasses()
+        navTitles[3].classList.add('white')
+        break
+      default:
+        removeWhiteClasses()
+
     }
 
-  })
+  }) // END OF SCROLL EVENT LISTENER
 
+  function removeWhiteClasses() {
+    navTitles[0].classList.remove('white')
+    navTitles[1].classList.remove('white')
+    navTitles[2].classList.remove('white')
+    navTitles[3].classList.remove('white')
+  }
 
 }) // END OF SCRIPT

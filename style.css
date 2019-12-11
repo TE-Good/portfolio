@@ -183,17 +183,26 @@ body, html {
   background: #DD1C1A;
 }
 
-.project-titles > a {
-  background: none;
+.project-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-title-wrapper > a {
+  background: #DD1C1A;
   text-decoration: none;
   color: black;
 }
-.project-titles > a:hover {
+.project-title-wrapper > a:hover {
   color: white;
 }
-
-.project-card-container-wrapper {
-  background: red;
+.nav-title-underline {
+  height: 2px;
+  width: 100%;
+  border-radius: 10%;
+  background:#DD1C1A;
 }
 
 .project-card-container {
@@ -369,7 +378,7 @@ body, html {
 }
 
 .white {
-  color: white;
+  background: #F7FFF7;
 }
 
 .hidden {
