@@ -178,7 +178,7 @@ body, html {
   height: 10vh;
   width: 100vw;
   border-bottom: 1px solid grey;
-  border: 2px green dashed;
+  /* border: 2px green dashed; */
   background: #DD1C1A;
 }
 
