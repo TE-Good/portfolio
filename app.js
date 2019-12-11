@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let i = 0
   setTimeout(() => {
     const countTo100 = setInterval(() => {
-      console.log(i)
+      // console.log(i)
       if (i >= 100) {
         clearInterval(countTo100)
       }
