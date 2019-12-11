@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -103,8 +104,8 @@ body, html {
   background: #292F36;
 }
 
-/* SECOND SECTION */
-.second-wrapper {
+/* PROJECT SECTION */
+.projects-wrapper {
   width: 100vw;
   /* height: 100vh; */
   /* background: #70A9A1; */
@@ -117,21 +118,23 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px purple dashed;
+  /* border: 5px purple dashed; */
 }
 
 .project-header {
-  border: 2px red dashed;
+  /* border: 2px red dashed; */
   width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #DD1C1A;
 }
 .project-header > h2 {
+  background: none;
   font-size: 300%;
   position: relative;
-  right: 25vw;
+  right: 30vw;
   /* border-bottom: #DD1C1A; */
 }
 
@@ -142,13 +145,20 @@ body, html {
 
   height: 10vh;
   width: 100vw;
-  border: 2px green dashed;
+  border-bottom: 1px solid grey;
+  /* border: 2px green dashed; */
+  background: #DD1C1A;
+}
+
+.project-titles > h4 {
+  background: none;
+
 }
 
 .project-card-container {
   height: 80vh;
   width: 100vw;
-  border: 2px blue dashed;
+  /* border: 2px blue dashed; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +167,7 @@ body, html {
 .project-card {
   height: 60vh;
   width: 80vw;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   box-shadow: 3px 3px 4px 1px rgba(0,0,0,0.75);
   
   display: flex;
@@ -165,17 +175,81 @@ body, html {
 }
 
 .project-image {
-  width: 40%;
-  background: grey;
+  width: 55%;
+  /* background: grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+.project-image-container {
+  height: 80%;
+  width: 100%;
+  background: none;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-container > img {
+  height: 90%;
+  width: auto;
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+}
+.project-image-links {
+  height: 20%;
+  /* border: red 1px solid; */
+  width: 100%;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-image-links > div {
+  /* background: #DD1C1A; */
+  height: 50%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px black solid;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.project-image-links > div:hover {
+  color: #DD1C1A;
+}
+
+.project-image-links > div > i {
+  margin-right: 10%;
+  font-size: 200%;
+  background: none;
+  /* color: white; */
+}
+
+.project-image-links > div > h5 {
+  /* color: white; */
+  background: none;
+}
+
 .project-text {
-  width: 60%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .project-text-title {
   height: 20%;
-  border: 3px green solid;
+  width: 100%;
+  /* border: 3px green solid; */
   display: flex;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .project-text-title > h4 {
   font-size: 200%;
@@ -183,88 +257,47 @@ body, html {
   margin-left: 10%;
 }
 
+.project-title-underline {
+  width: 200px;
+  height: 2px;
+  background: #DD1C1A;
+  margin-left: 10%;
+}
+
 .project-text-main {
-  height: 60%;
-  border: 3px red solid;
-}
-.project-text-links {
-  height: 20%;
-  border: 3px green solid;
-}
-
-
-
-
-.first-card {
-  width: 25vw;
-  height: 70vh;
-  border: green 2px solid;
+  height: 40%;
+  width: 80%;
+  /* border: 3px red solid; */
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.card-one {
-  border: 2px green solid;
-  height: 20vh;
-  width: 100%;
-  font-size: 200%;
-}
-
-.card-one-line {
-  height: 3px;
-  width: 300px;
-  /* background: white; */
-}
-
-.card-two {
-  height: 50vh;
-  width: 100%;
-  border: 2px blue solid;
-  font-size: 200%;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.card-two > h4 {
-  cursor: pointer;
-  margin: 15px;
-  width: 250px;
-  /* border: 1px black solid; */
-  border-radius: 5px;
-  /* background: #DD1C1A; */
-  border: 2px black solid;
-  /* color: white; */
-
-  display: flex;
-  justify-content: center;
-
-}
-
-.card-two > h3:hover {
-  /* color: #DD1C1A; */
-  /* background: none; */
-  border: 2px #DD1C1A solid;
-}
-
-.second-card {
-  width: 40vw;
-  height: 70vh;
-  font-size: 170%;
+.project-text-main > p {
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  border: green 2px solid;
-  font-family: 'Lato', sans-serif;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
 }
+
+.project-text-tech {
+  height: 40%;
+  width: 100%;
+  /* border: 3px green solid; */
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project-text-tech > i {
+  font-size: 250%
+}
+
+
+
+
+
 
 .icons {
   height: 80vh;
@@ -287,62 +320,6 @@ body, html {
   flex-direction: column;
 }
 
-.icon-square {
-  height: 100px;
-  width: 100px;
-  background: #F7FFF7;
-  /* margin: 20px; */
-  margin: 40px;
-  border-radius: 5px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon-square > i {
-  /* color: #292F36; */
-  /* color: #DD1C1A; */
-  /* font-size: 330%; */
-  font-size: 530%;
-}
-
-
-footer {
-  height: 20vh;
-  width: 100vw;
-  background: red;
-}
-
-/* PROJECTS SECTION
-.projects-wrapper {
-  width: 100vw;
-  height: 200vh;
-  background: green;
-}
-.projects-title {
-  width: 100vw;
-  height: 30vh;
-  border: blue dashed 2px;
-}
-.projects-card {
-  width: 100vw;
-  height: 50vh;
-  border: red dashed 2px;
-}
-.projects-foot {
-  width: 100vw;
-  height: 20vh;
-  border: blue dashed 2px;
-} */
-
-.pacman {
-  height: 68vh;
-  width: 40vw;
-  border: 1px dashed blue;
-}
-
-
 /* PARALLAX */
 /* .parallax {
   perspective: 1px;
@@ -363,3 +340,7 @@ footer {
 .parallax__layer--back {
   transform: translateZ(-1px);
 } */
+
+.hidden {
+  display: none;
+}
