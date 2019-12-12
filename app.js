@@ -17,6 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const landingH3 = document.querySelector('.landing-h3')
   const landingText = document.querySelector('.landing-text')
   const landingIcon = document.querySelectorAll('.landing-icon')
+  // LANDING ARROW
+  const landingArrow = document.querySelector('.arrow-wrapper')
 
   let i = 0
   setTimeout(() => {
@@ -32,6 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
         landingIcon[0].classList.add('fadeIn')
         landingIcon[1].classList.remove('hidden')
         landingIcon[1].classList.add('fadeIn')
+        landingArrow.classList.remove('hidden')
+        landingArrow.classList.add('fadeIn')
       }
       if (i === 50) {
         landingH3.classList.remove('hidden')

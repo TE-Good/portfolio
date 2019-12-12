@@ -50,7 +50,7 @@ body, html {
   background: none;
 }
 
-.landing-wrapper > a > .arrow {
+.arrow-wrapper > a > .arrow {
   height: 50px;
   width: 50px;
   border-bottom: 8px solid black;
@@ -160,6 +160,16 @@ body, html {
 
 .landing-links > a > i {
   font-size: 400%;
+}
+
+.arrow-wrapper-container {
+  height: 10vh;
+}
+
+.arrow-wrapper {
+  height: 100%;
+  /* width: 100%; */
+  /* background: red; */
 }
 
 /* PROJECT SECTION */
