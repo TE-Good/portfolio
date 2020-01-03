@@ -210,6 +210,15 @@ body, html {
   height: 100%;
   width: 30%;
   background: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left img {
+  height: 90%;
+  width: auto;
 }
 
 .about-right {
@@ -223,12 +232,68 @@ body, html {
   height: 60%;
   width: 100%;
   background: green;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-text h1 {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 4vh;
+}
+
+.about-text p {
+  width: 85%;
+  margin-top: 5vh;
+
+  display: flex;
+  justify-content: center;
+  text-align: justify;
 }
 
 .about-tech {
   height: 40%;
   width: 100%;
   background: purple;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-tech-container {
+  height: 80%;
+  width: 90%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-tech-wrapper {
+  height: 10vh;
+  width: 10vh;
+  border: 1px blue solid;
+  margin: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-tech-wrapper i {
+  font-size: 5vh;
+  margin-bottom: 1vh;
+}
+
+.about-tech-wrapper p {
+  font-size: 1vh;
 }
 
 .about-arrow-wrapper-container {
