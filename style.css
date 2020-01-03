@@ -208,7 +208,7 @@ body, html {
 .about-section-one {
   height: 70%;
   width: 80%;
-  border: red 1px solid;
+  /* border: red 1px solid; */
 
   display: flex;
 }
@@ -216,7 +216,7 @@ body, html {
 .about-left {
   height: 100%;
   width: 30%;
-  background: red;
+  /* background: red; */
 
   display: flex;
   justify-content: center;
@@ -232,13 +232,13 @@ body, html {
   height: 100%;
   width: 70%;
   /* background: blue; */
-  border: blue 1px solid;
+  /* border: blue 1px solid; */
 }
 
 .about-text {
   height: 60%;
   width: 100%;
-  background: green;
+  /* background: green; */
 
   display: flex;
   justify-content: flex-start;
@@ -250,15 +250,14 @@ body, html {
   text-decoration: underline;
   text-decoration-color: #DD1C1A;
 
-  display: flex;
-  justify-content: center;
+  align-self: flex-start;
 
-  margin-top: 4vh;
+  margin: 6vh 0 0 8vw;
 }
 
 .about-text p {
-  width: 85%;
-  margin-top: 10vh;
+  width: 80%;
+  margin-top: 8vh;
 
   display: flex;
   justify-content: center;
@@ -268,7 +267,7 @@ body, html {
 .about-tech {
   height: 40%;
   width: 100%;
-  background: purple;
+  /* background: purple; */
 
   display: flex;
   justify-content: center;
@@ -276,7 +275,7 @@ body, html {
 }
 
 .about-tech-container {
-  height: 80%;
+  height: 90%;
   width: 90%;
 
   display: flex;
@@ -286,10 +285,10 @@ body, html {
 }
 
 .about-tech-wrapper {
-  height: 10vh;
+  height: 11vh;
   width: 10vh;
   /* border: 1px blue solid; */
-  margin: 5px;
+  margin: 1vh;
 
   display: flex;
   justify-content: center;
