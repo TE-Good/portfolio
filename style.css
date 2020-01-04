@@ -235,6 +235,7 @@ a {
 .about-left img {
   height: 90%;
   width: auto;
+  border-radius: 2px;
 }
 
 .about-right {
@@ -457,7 +458,7 @@ a {
   height: 100%;
   width: 100%;
   /* border: 1px red dashed; */
-  background: rgba(0, 0, 0, 0.719);
+  background: rgba(0, 0, 0, 0.1);
 
   display: flex;
   justify-content: center;
@@ -476,6 +477,8 @@ a {
   height: 22vh;
   width: 50%;
   /* border: 2px dashed green; */
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.95);
 
   display: flex;
@@ -484,8 +487,8 @@ a {
   /* flex-direction: column; */
   z-index: 1;
   position: relative;
-  /* bottom: 30vh; */
   bottom: 28vh;
+  /* bottom: 24vh; */
   left: 25%;
 }
 
@@ -581,8 +584,8 @@ a {
 .project-arrow-left {
   height: 50px;
   width: 50px;
-  border-bottom: 8px solid black;
-  border-right: 8px solid black;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.5);
+  border-right: 8px solid rgba(0, 0, 0, 0.5);
   transform: rotate(135deg);
   cursor: pointer;
   background: none;
@@ -593,8 +596,8 @@ a {
 .project-arrow-right {
   height: 50px;
   width: 50px;
-  border-bottom: 8px solid black;
-  border-right: 8px solid black;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.5);
+  border-right: 8px solid rgba(0, 0, 0, 0.5);
   transform: rotate(315deg);
   cursor: pointer;
   background: none;
@@ -603,12 +606,14 @@ a {
 }
 
 .project-arrow-right:hover {
-  border-bottom: 8px solid #DD1C1A;
-  border-right: 8px solid #DD1C1A;
+  /* border-bottom: 8px solid #DD1C1A;
+  border-right: 8px solid #DD1C1A; */
+  border-bottom: 8px solid rgba(221, 29, 26, 0.9);
+  border-right: 8px solid rgba(221, 29, 26, 0.9);
 }
 .project-arrow-left:hover {
-  border-bottom: 8px solid #DD1C1A;
-  border-right: 8px solid #DD1C1A;
+  border-bottom: 8px solid rgba(221, 29, 26, 0.9);
+  border-right: 8px solid rgba(221, 29, 26, 0.9);
 }
 
 /* JS CLASSES */

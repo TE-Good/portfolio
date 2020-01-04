@@ -200,6 +200,18 @@ window.addEventListener('DOMContentLoaded', () => {
       return currentSlide
     })
 
+    // BOUNCING ABOUT PAGE ICONS
+
+    const aboutIcons = document.querySelectorAll('.about-icon')
+    // console.log(aboutIcons)
+
+    aboutIcons.forEach(icon => {
+      icon.addEventListener('mouseover', () => {
+        icon.classList.add('bounce')
+        setTimeout(() => icon.classList.remove('bounce'), 1000)
+      })
+    })
+
   }) // END OF SCROLL EVENT LISTENER
 
   // function removeWhiteClasses() {
