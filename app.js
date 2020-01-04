@@ -157,6 +157,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // CAROUSEL SLIDE NUMBER
     let currentSlide = 0
+    projectNavTitles[currentSlide].classList.add('color-red')
     
     // ADDING CLICK
     arrowRight.addEventListener('click', () => {
@@ -164,15 +165,8 @@ window.addEventListener('DOMContentLoaded', () => {
       if (currentSlide === projectCards.length - 1) currentSlide = 0
       else currentSlide++
       projectCards[currentSlide].classList.remove('hidden')
-      switch (currentSlide) {
-        case currentSlide === 1:
-          console.log(1)
-          // projectNavTitles[1].classList.add('.color-red')
-          break
-      
-        default:
-          break
-      }
+      removeColorRed()
+      projectNavTitles[currentSlide].classList.add('color-red')
       return currentSlide
     })
     arrowLeft.addEventListener('click', () => {
@@ -180,6 +174,29 @@ window.addEventListener('DOMContentLoaded', () => {
       if (currentSlide === 0) currentSlide = projectCards.length - 1
       else currentSlide--
       projectCards[currentSlide].classList.remove('hidden')
+      removeColorRed()
+      projectNavTitles[currentSlide].classList.add('color-red')
+      return currentSlide
+    })
+    // REMOVING COLORS FROM NAV TITLES
+    function removeColorRed() {
+      projectNavTitles.forEach(title => title.classList.remove('color-red'))
+    }
+    // NAV CLICK
+    projectNavTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        removeColorRed()
+        title.classList.add('color-red')
+
+        projectCards.forEach(card => {
+          if (card.id === title.id) {
+            projectCards[currentSlide].classList.add('hidden')
+            currentSlide = Array.from(projectCards).indexOf(card)
+            projectCards[currentSlide].classList.remove('hidden')
+            return currentSlide
+          }
+        })
+      })
       return currentSlide
     })
 
