@@ -1,24 +1,27 @@
 window.addEventListener('DOMContentLoaded', () => {
   console.log('script loaded')
 
-  // NAVBAR
-  const projectNav = document.querySelector('.project-titles')
+  // // NAVBAR
+  // const projectNav = document.querySelector('.project-titles')
   
-  // PROJECT CARDS
-  const startingTitles = document.querySelectorAll('.startingTitle')
-  const projectCards = document.querySelectorAll('.project-card')
+  // // PROJECT CARDS
+  // const startingTitles = document.querySelectorAll('.startingTitle')
+  // const projectCards = document.querySelectorAll('.project-card')
   
   // NAV TITLES
-  const navTitles = document.querySelectorAll('.nav-title-underline')
+  // const navTitles = document.querySelectorAll('.nav-title-underline')
 
   // LANDING UNDERLINE
   const landingUnderline = document.getElementById('landing-inner-line')
   // LANDING H3
   const landingH3 = document.querySelector('.landing-h3')
   // const landingText = document.querySelector('.landing-text')
-  const landingIcon = document.querySelectorAll('.landing-icon')
+  // const landingIcon = document.querySelectorAll('.landing-icon')
   // LANDING ARROW
   const landingArrow = document.querySelector('.arrow-wrapper')
+  
+  // ABOUT ICONS
+  const icons = document.querySelectorAll('.tech-icon')
 
   let i = 0
 
@@ -131,6 +134,43 @@ window.addEventListener('DOMContentLoaded', () => {
     //     removeWhiteClasses()
 
     // }
+
+    // ICON HOVER COLOR
+    icons.forEach(icon => {
+      icon.addEventListener('mouseover', () => {
+        icon.classList.add('colored')
+      })
+      icon.addEventListener('mouseout', () => {
+        icon.classList.remove('colored')
+      })
+    })
+
+    // Carousel
+    // PROJECT CARDS
+    const projectCards = document.querySelectorAll('.project-content')
+    console.log(projectCards)
+    // ARROWS
+    const arrowLeft = document.querySelector('.project-arrow-left')
+    const arrowRight = document.querySelector('.project-arrow-right')
+
+    let currentSlide = 0
+    
+    // ADDING CLICK
+    arrowRight.addEventListener('click', () => {
+      projectCards[currentSlide].classList.add('hidden')
+      if (currentSlide === projectCards.length - 1) currentSlide = 0
+      else currentSlide++
+      projectCards[currentSlide].classList.remove('hidden')
+      return currentSlide
+    })
+    arrowLeft.addEventListener('click', () => {
+      projectCards[currentSlide].classList.add('hidden')
+      if (currentSlide === 0) currentSlide = projectCards.length - 1
+      else currentSlide--
+      projectCards[currentSlide].classList.remove('hidden')
+      return currentSlide
+    })
+
 
   }) // END OF SCROLL EVENT LISTENER
 
