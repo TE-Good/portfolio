@@ -53,7 +53,13 @@
         <div class="about-right">
           <div class="about-text">
             <!-- <p>hi. welcome to my website.</p> -->
-            <h1>About Me</h1>
+            <div class="about-title">
+              <h1>About Me</h1>
+              <div class="title-link-icons">
+                <a class="link-outer" href="https://github.com/TE-Good">Github <i class="devicon-github-plain link-inner"></i></a>
+                <a class="link-outer" href="https://www.linkedin.com/in/te-good/">LinkedIn <i class="fab fa-linkedin link-inner"></i></a class="link-outer">
+              </div>
+            </div>
             <p>I am driven to learn and build upon my existing knowledge, and also to be creative in a development capacity. Having solidified a good understanding in JavaScript, Python, React amongst other frameworks/languages - I am now looking for an opportunity to further my expertise within this space. Using past experience, I am able to utilise additional skills including to creatively and critically look into aspects of tasks and problems.</p>
           </div>
           <!-- HAVE ALL DEV ICONS FADE UP FROM THE RED LINE ONE AFTER ANOTHER LIKE A WAVE -->
@@ -154,6 +160,7 @@
     </div>
   </div>
   <div id="projects" class="projects">
+    <!-- ADD SWIPING LOOK INTO IMAGES MOVING -->
     <!-- MENU -->
     <div class="project-left-menu">
       <div class="project-left-title">
@@ -176,13 +183,20 @@
           <div class="project-content-text">
             <h3>Pacman</h3>
             <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo project was created in 7 days.</p>
+            <div class="project-content-link-container">
+              <a class="link-outer" href="https://github.com/TE-Good/pacman">Github <i class="devicon-github-plain link-inner"></i></a>
+              <a class="link-outer" href="https://te-good.github.io/pacman/">Deployed <i class="devicon-github-plain link-inner"></i></a>
+            </div>
           </div>
+          <div class="project-divider"></div>
           <div class="project-content-tech">
-            <h4>Technologies Used</h4>
-            <i class="devicon-html5-plain-wordmark"></i>
-            <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-git-plain"></i>
+            <h4>Created Using:</h4>
+            <div class="project-content-tech-container">
+              <i class="devicon-html5-plain tech-icon"></i>
+              <i class="devicon-css3-plain tech-icon"></i>
+              <i class="devicon-javascript-plain tech-icon"></i>
+              <i class="devicon-git-plain tech-icon"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -194,15 +208,21 @@
         <div class="project-content-bottom">
           <div class="project-content-text">
             <h3>Flash Films</h3>
-            <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo project was created in 7 days.</p>
+            <p>Film search engine based on actors and genres. During a 48 hour paired-hackathon, using a third-party RESTful API, we created a React.js front end to receive the data and display it.</p>
+            <div class="project-content-link-container">
+              <a class="link-outer" href="https://github.com/TE-Good/flash-films">Github <i class="devicon-github-plain link-inner"></i></a>
+              <a class="link-outer" href="https://flash-films.herokuapp.com/">Deployed <i class="devicon-heroku-plain link-inner"></i></a>
+            </div>
           </div>
+          <div class="project-divider"></div>
           <div class="project-content-tech">
-            <h3>-</h3>
-            <h4>Technologies Used</h4>
-            <i class="devicon-html5-plain-wordmark"></i>
-            <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-git-plain"></i>
+            <h4>Created Using:</h4>
+            <div class="project-content-tech-container">
+              <i class="devicon-javascript-plain tech-icon"></i>
+              <i class="devicon-react-original tech-icon"></i>
+              <i class="devicon-css3-plain tech-icon"></i>
+              <i class="devicon-git-plain tech-icon"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -214,15 +234,23 @@
         <div class="project-content-bottom">
           <div class="project-content-text">
             <h3>TeckTalk</h3>
-            <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo project was created in 7 days.</p>
+            <p>Collaborating in a group of 4, across a 7 day project; we created a website around technology meet-ups. This included creating a RESTful back end using Node.js, Express, and MongoDB, and a React front end.</p>
+            <div class="project-content-link-container">
+              <a class="link-outer" href="https://github.com/TE-Good/tech-talk">Github <i class="devicon-github-plain link-inner"></i></a class="link-outer">
+              <a class="link-outer" href="https://tecktalk.herokuapp.com/">Deployed <i class="devicon-heroku-plain link-inner"></i></a class="link-outer">
+            </div>
           </div>
+          <div class="project-divider"></div>
           <div class="project-content-tech">
-            <h3>-</h3>
-            <h4>Technologies Used</h4>
-            <i class="devicon-html5-plain-wordmark"></i>
-            <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-git-plain"></i>
+            <h4>Created Using:</h4>
+            <div class="project-content-tech-container">
+              <i class="devicon-javascript-plain tech-icon"></i>
+              <i class="devicon-react-original tech-icon"></i>
+              <i class="devicon-css3-plain tech-icon"></i>
+              <i class="devicon-git-plain tech-icon"></i>
+              <i class="devicon-nodejs-plain tech-icon"></i>
+              <i class="devicon-mongodb-plain tech-icon"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -234,15 +262,24 @@
         <div class="project-content-bottom">
           <div class="project-content-text">
             <h3>Whatify</h3>
-            <p>Based upon the classic Pacman. Navigate the stages, collecting pips while avoiding the ghosts! This solo project was created in 7 days.</p>
+            <p>A music quiz game using Spotify's API and user created data to make games custom to the player. Whatify was created by a 3 person team across a week, and utilises JavaScript, React, Python, Django, PostgreSQL and Heroku.</p>
+            <div class="project-content-link-container">
+              <a class="link-outer" href="https://github.com/TE-Good/whatify">Github <i class="devicon-github-plain link-inner"></i></a>
+              <a class="link-outer" href="http://www.whatify.me/">Deployed <i class="devicon-heroku-plain link-inner"></i></a>
+            </div>
           </div>
+          <div class="project-divider"></div>
           <div class="project-content-tech">
-            <h3>-</h3>
-            <h4>Technologies Used</h4>
-            <i class="devicon-html5-plain-wordmark"></i>
-            <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-git-plain"></i>
+            <h4>Created Using:</h4>
+            <div class="project-content-tech-container">
+              <i class="devicon-javascript-plain tech-icon"></i>
+              <i class="devicon-react-original tech-icon"></i>
+              <i class="devicon-css3-plain tech-icon"></i>
+              <i class="devicon-git-plain tech-icon"></i>
+              <i class="devicon-python-plain tech-icon"></i>
+              <i class="devicon-django-plain tech-icon"></i>
+              <i class="devicon-postgresql-plain tech-icon"></i>
+            </div>
           </div>
         </div>
       </div>

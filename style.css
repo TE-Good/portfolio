@@ -33,6 +33,15 @@ body, html {
   scroll-behavior: smooth;
 }
 
+h3, h4, p, i {
+  background: none;
+}
+a {
+  background: none;
+  text-decoration: none;
+  color: black;
+}
+
 /* -------------------------- */
 /*      LANDING SECTION       */
 /* -------------------------- */
@@ -239,6 +248,7 @@ body, html {
   height: 60%;
   width: 100%;
   /* background: green; */
+  /* border: green 1px solid; */
 
   display: flex;
   justify-content: flex-start;
@@ -246,7 +256,17 @@ body, html {
   flex-direction: column;
 }
 
-.about-text h1 {
+.about-title {
+  height: 55%;
+  width: 100%;
+  /* border: 1px purple solid; */
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-end;
+}
+
+.about-text .about-title h1 {
   text-decoration: underline;
   text-decoration-color: #DD1C1A;
 
@@ -255,9 +275,34 @@ body, html {
   margin: 6vh 0 0 8vw;
 }
 
+.title-link-icons {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.title-link-icons > a {
+  text-decoration: none;
+  color: black;
+  margin-left: 2vw;
+}
+
+.link-outer:hover {
+  color: #DD1C1A;
+}
+.link-outer:hover .link-inner {
+  color: #DD1C1A;
+}
+
+.title-link-icons > a > i {
+  font-size: 300%;
+  color: black;
+}
+
 .about-text p {
   width: 80%;
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
 
   display: flex;
   justify-content: center;
@@ -329,7 +374,7 @@ body, html {
   height: 100vh;
   width: 100vw;
   /* border: 2px blue dashed; */
-  border-top: 2px black solid;
+  /* border-top: 2px black solid; */
   background: none;
   
   display: flex;
@@ -412,7 +457,7 @@ body, html {
   height: 100%;
   width: 100%;
   /* border: 1px red dashed; */
-  background: black;
+  background: rgba(0, 0, 0, 0.719);
 
   display: flex;
   justify-content: center;
@@ -428,33 +473,94 @@ body, html {
 }
 
 .project-content-bottom {
-  height: 30vh;
-  width: 25vw;
-  border: 2px dashed green;
+  height: 22vh;
+  width: 50%;
+  /* border: 2px dashed green; */
+  background: rgba(255, 255, 255, 0.95);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  z-index: 1;
+  position: relative;
+  /* bottom: 30vh; */
+  bottom: 28vh;
+  left: 25%;
+}
+
+.project-content-text {
+  height: 100%;
+  width: 70%;
   background: none;
+  /* border: 2px purple dashed; */
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1;
-  position: relative;
-  bottom: 90vh;
-  left: 58vw;
 }
 
-.project-content-text {
-  height: 50%;
+.project-content-text h3 {
+  /* position: relative;
+  left: -30%; */
+  align-self: flex-start;
+  margin: 0 0 1vh 2vw;
+  text-decoration: underline;
+  text-decoration-color: #DD1C1A;
+  /* text-decoration-thickness: 4px; */
+}
+
+.project-content-text p {
+  margin: 0 2vw 0 2vw;
+  text-align: justify;
+}
+
+.project-content-link-container {
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
+  height: auto;
+  position: relative;
+  top: 1vh;
   background: none;
-  border: 2px purple dashed;
+}
+
+.project-divider {
+  height: 80%;
+  width: 0.3%;
+  background: #DD1C1A;
 }
 
 .project-content-tech {
-  height: 50%;
+  height: 100%;
+  width: 29.7%;
+  background: none;
+  /* border: 2px purple dashed; */
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-content-tech-container {
   width: 100%;
   background: none;
-  border: 2px purple dashed;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project-content-tech i {
+  font-size: 3vh;
+  /* margin-bottom: 1vh; */
+  /* color: #DD1C1A; */
+  cursor: pointer;
+  z-index: 1;
+  margin: 1vh 1vw;
 }
 
 .project-arrows-cover {
@@ -469,6 +575,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;        
 }
 
 .project-arrow-left {
@@ -480,6 +587,7 @@ body, html {
   cursor: pointer;
   background: none;
   margin-left: 2vw;
+  pointer-events: auto;        
 }
 
 .project-arrow-right {
@@ -491,6 +599,7 @@ body, html {
   cursor: pointer;
   background: none;
   margin-right: 2vw;
+  pointer-events: auto;        
 }
 
 .project-arrow-right:hover {

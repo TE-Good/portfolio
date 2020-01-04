@@ -200,7 +200,6 @@ window.addEventListener('DOMContentLoaded', () => {
       return currentSlide
     })
 
-
   }) // END OF SCROLL EVENT LISTENER
 
   // function removeWhiteClasses() {
