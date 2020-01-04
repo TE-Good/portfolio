@@ -328,7 +328,9 @@ body, html {
 .projects {
   height: 100vh;
   width: 100vw;
-  border: 2px blue dashed;
+  /* border: 2px blue dashed; */
+  border-top: 2px black solid;
+  background: none;
   
   display: flex;
 }
@@ -383,10 +385,11 @@ body, html {
   height: 100%;
   width: 85%;
   /* background: grey; */
+  background: none;
 
-  display: flex;
+  /* display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center; */
 
   /* background-image: url("https://i.imgur.com/xcLcVuO.jpg");
   background-size: contain;
@@ -394,52 +397,78 @@ body, html {
 }
 
 .project-content {
-  height: 70%;
-  width: 70%;
+  height: 100%;
+  width: 100%;
+  background: none;
+  /* border: #DD1C1A 1px solid; */
+
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.project-content-image {
+  height: 100%;
+  width: 100%;
+  /* border: 1px red dashed; */
+  background: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.project-content-image img {
+  height: auto;
+  width: 100%;
+  /* border: 1px black solid; */
+  
+}
+
+.project-content-bottom {
+  height: 30vh;
+  width: 25vw;
+  border: 2px dashed green;
   background: none;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.project-content-image {
-  height: 80%;
-  width: 100%;
-  /* border: 1px red dashed; */
-  background: none;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-content-image img {
-  height: 90%;
-  width: auto;
-  
-}
-
-.project-content-bottom {
-  height: 20%;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 1;
+  position: relative;
+  bottom: 90vh;
+  left: 58vw;
 }
 
 .project-content-text {
-  height: 100%;
-  width: 50%;
-  /* border: 2px purple dashed; */
+  height: 50%;
+  width: 100%;
+  background: none;
+  border: 2px purple dashed;
 }
 
 .project-content-tech {
+  height: 50%;
+  width: 100%;
+  background: none;
+  border: 2px purple dashed;
+}
+
+.project-arrows-cover {
   height: 100%;
-  width: 50%;
-  /* border: 2px purple dashed; */
+  width: 100%;
+  background: none;
+  z-index: 1;
+  position: relative;
+  bottom: 100vh;
+  /* border: 3px purple dashed; */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .project-arrow-left {
@@ -449,6 +478,8 @@ body, html {
   border-right: 8px solid black;
   transform: rotate(135deg);
   cursor: pointer;
+  background: none;
+  margin-left: 2vw;
 }
 
 .project-arrow-right {
@@ -458,6 +489,17 @@ body, html {
   border-right: 8px solid black;
   transform: rotate(315deg);
   cursor: pointer;
+  background: none;
+  margin-right: 2vw;
+}
+
+.project-arrow-right:hover {
+  border-bottom: 8px solid #DD1C1A;
+  border-right: 8px solid #DD1C1A;
+}
+.project-arrow-left:hover {
+  border-bottom: 8px solid #DD1C1A;
+  border-right: 8px solid #DD1C1A;
 }
 
 /* JS CLASSES */
@@ -474,6 +516,9 @@ body, html {
 
 .white {
   background: #F7FFF7;
+}
+.color-red {
+  color: #DD1C1A;
 }
 
 .hidden {

@@ -148,11 +148,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // Carousel
     // PROJECT CARDS
     const projectCards = document.querySelectorAll('.project-content')
-    console.log(projectCards)
     // ARROWS
     const arrowLeft = document.querySelector('.project-arrow-left')
     const arrowRight = document.querySelector('.project-arrow-right')
 
+    // NAV TITLES
+    const projectNavTitles = document.querySelectorAll('.project-title-name')
+
+    // CAROUSEL SLIDE NUMBER
     let currentSlide = 0
     
     // ADDING CLICK
@@ -161,6 +164,15 @@ window.addEventListener('DOMContentLoaded', () => {
       if (currentSlide === projectCards.length - 1) currentSlide = 0
       else currentSlide++
       projectCards[currentSlide].classList.remove('hidden')
+      switch (currentSlide) {
+        case currentSlide === 1:
+          console.log(1)
+          // projectNavTitles[1].classList.add('.color-red')
+          break
+      
+        default:
+          break
+      }
       return currentSlide
     })
     arrowLeft.addEventListener('click', () => {
