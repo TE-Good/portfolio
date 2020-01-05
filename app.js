@@ -69,7 +69,43 @@ window.addEventListener('DOMContentLoaded', () => {
     const pagePercentageScrolled = Number(((window.scrollY + document.body.offsetHeight) / scrollHeight).toFixed(3))
     // console.log(window.pageYOffset)
     // console.log(window.scrollY)
-    // console.log('page percentage:', pagePercentageScrolled)
+    console.log('page percentage:', pagePercentageScrolled)
+
+    // SCROLL TRIGGERED ANIMATION
+    
+    // **** ABOUT ****
+    const aboutImage = document.querySelector('.portrait-image')
+    const aboutTechContainer = document.querySelector('.about-tech-container')
+    const aboutArrow = document.querySelector('.about-arrow')
+    const aboutText = document.querySelector('.about-text')
+
+    if (pagePercentageScrolled > 0.59) {
+      aboutImage.classList.remove('hidden')
+      aboutImage.classList.add('fadeInLeft')
+
+      aboutTechContainer.classList.remove('hidden')
+      aboutTechContainer.classList.add('fadeInUp')
+
+      aboutText.classList.remove('hidden')
+      aboutText.classList.add('fadeIn')
+
+      setTimeout(() => {
+        aboutArrow.classList.remove('hidden')
+        aboutArrow.classList.add('fadeIn')
+      }, 500)
+    }
+
+    // PROJECT
+    const projectContainerLeft = document.querySelector('.project-left-menu')
+    const projectContainerRight = document.querySelector('.project-right-content')
+
+    if (pagePercentageScrolled > 0.88) {
+      projectContainerLeft.classList.remove('hidden')
+      projectContainerLeft.classList.add('fadeIn')
+
+      projectContainerRight.classList.remove('hidden')
+      projectContainerRight.classList.add('fadeIn')
+    }
 
     // // NAVBAR FIXED POSITION
     // if (pagePercentageScrolled >= 0.472) {
@@ -135,15 +171,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // }
 
-    // ICON HOVER COLOR
-    icons.forEach(icon => {
-      icon.addEventListener('mouseover', () => {
-        icon.classList.add('colored')
-      })
-      icon.addEventListener('mouseout', () => {
-        icon.classList.remove('colored')
-      })
-    })
+    // // ICON HOVER COLOR
+    // icons.forEach(icon => {
+    //   icon.addEventListener('mouseover', () => {
+    //     icon.classList.add('colored')
+    //   })
+    //   icon.addEventListener('mouseout', () => {
+    //     icon.classList.remove('colored')
+    //   })
+    // })
 
     // Carousel
     // PROJECT CARDS
@@ -201,14 +237,17 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     // BOUNCING ABOUT PAGE ICONS
-
     const aboutIcons = document.querySelectorAll('.about-icon')
     // console.log(aboutIcons)
 
     aboutIcons.forEach(icon => {
       icon.addEventListener('mouseover', () => {
+        icon.classList.add('colored')
         icon.classList.add('bounce')
-        setTimeout(() => icon.classList.remove('bounce'), 1000)
+        setTimeout(() => {
+          icon.classList.remove('bounce')
+          icon.classList.remove('colored')
+        }, 1000)
       })
     })
 

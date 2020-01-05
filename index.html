@@ -48,10 +48,10 @@
   <div id="about" class="about">
       <div class="about-section-one">
         <div class="about-left">
-          <img src="https://i.imgur.com/L9ups9r.jpg" alt="portrait">
+          <img class="portrait-image hidden animated" src="https://i.imgur.com/L9ups9r.jpg" alt="portrait">
         </div>
         <div class="about-right">
-          <div class="about-text">
+          <div class="about-text animated hidden slow">
             <!-- <p>hi. welcome to my website.</p> -->
             <div class="about-title">
               <h1>About Me</h1>
@@ -66,7 +66,7 @@
           <!-- WHEN YOU HOVER OVER AN ICON IT WILL JUMP ONCE? OR INFINITELY -->
           <!-- ADD A CONTACTS BIT TO THIS -->
           <div class="about-tech">
-            <div class="about-tech-container">
+            <div class="about-tech-container hidden animated">
               <div class="about-tech-wrapper">
                 <i class="devicon-html5-plain tech-icon animated fast about-icon"></i>
                 <div class="about-tech-line"></div>
@@ -152,7 +152,7 @@
         </div>
     </div>
     <div class="about-arrow-wrapper-container animated pulse slow infinite">
-      <div class="arrow-wrapper animated">
+      <div class="arrow-wrapper animated hidden about-arrow slow">
         <a href="#projects" class="grow">
           <div class="arrow"></div>
         </a>
@@ -163,10 +163,7 @@
     <!-- ADD SWIPING LOOK INTO IMAGES MOVING -->
     <!-- HAVE THE GREY BEHIND FADE IN ONCE WE ARE IN FOCUS - REMOVE IT WHEN SCROLLING AWAY - IT SHOULD GET DARK AS YOUR SCROLL TOWARDS, LIGHTER AS YOU SCROLL AWAY -->
     <!-- MENU -->
-    <div class="project-left-menu">
-      <div class="project-left-title">
-        <h2>Projects</h2>
-      </div>
+    <div class="project-left-menu hidden animated slow">
       <div class="project-left-projects">
         <h3 id="Pacman" class="project-title-name">Pacman</h3>
         <h3 id="Flash Films" class="project-title-name">Flash Films</h3>
@@ -174,7 +171,10 @@
         <h3 id="Whatify" class="project-title-name">Whatify</h3>
       </div>
     </div>
-    <div class="project-right-content">
+    <div class="project-right-content hidden animated slow">
+      <div class="project-right-title">
+        <h2>Projects</h2>
+      </div>
       <!-- PROJECT 1 -->
       <div id="Pacman" class="project-content">
         <div class="project-content-image">
