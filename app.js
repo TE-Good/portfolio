@@ -1,27 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('script loaded')
+  // console.log('script loaded')
 
-  // // NAVBAR
-  // const projectNav = document.querySelector('.project-titles')
-  
-  // // PROJECT CARDS
-  // const startingTitles = document.querySelectorAll('.startingTitle')
-  // const projectCards = document.querySelectorAll('.project-card')
-  
-  // NAV TITLES
-  // const navTitles = document.querySelectorAll('.nav-title-underline')
 
+  // *** LANDING PAGE ANIMATIONS ***
   // LANDING UNDERLINE
   const landingUnderline = document.getElementById('landing-inner-line')
   // LANDING H3
   const landingH3 = document.querySelector('.landing-h3')
-  // const landingText = document.querySelector('.landing-text')
-  // const landingIcon = document.querySelectorAll('.landing-icon')
   // LANDING ARROW
   const landingArrow = document.querySelector('.arrow-wrapper')
-  
-  // ABOUT ICONS
-  const icons = document.querySelectorAll('.tech-icon')
 
   let i = 0
 
@@ -32,12 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
         clearInterval(countTo100)
       }
       if (i >= 90) {
-        // landingText.classList.remove('hidden')
-        // landingText.classList.add('fadeIn')
-        // landingIcon[0].classList.remove('hidden')
-        // landingIcon[0].classList.add('fadeIn')
-        // landingIcon[1].classList.remove('hidden')
-        // landingIcon[1].classList.add('fadeIn')
         landingArrow.classList.remove('hidden')
         landingArrow.classList.add('fadeIn')
       }
@@ -56,23 +37,23 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 15)
   }, 300)
 
-  
-  
+
+
   // FINDING MAX HEIGHT OF ANY BROWSER
   const scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
     document.body.offsetHeight, document.documentElement.offsetHeight,
     document.body.clientHeight, document.documentElement.clientHeight
   )
-  
+
+  // SCROLL TRIGGERED ANIMATION
   window.addEventListener('scroll', () => {
     const pagePercentageScrolled = Number(((window.scrollY + document.body.offsetHeight) / scrollHeight).toFixed(3))
     // console.log(window.pageYOffset)
     // console.log(window.scrollY)
-    console.log('page percentage:', pagePercentageScrolled)
+    // console.log('page percentage:', pagePercentageScrolled)
 
-    // SCROLL TRIGGERED ANIMATION
-    
+
     // **** ABOUT ****
     const aboutImage = document.querySelector('.portrait-image')
     const aboutTechContainer = document.querySelector('.about-tech-container')
@@ -95,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }, 500)
     }
 
-    // PROJECT
+    // **** PROJECT ****
     const projectContainerLeft = document.querySelector('.project-left-menu')
     const projectContainerRight = document.querySelector('.project-right-content')
 
@@ -107,157 +88,92 @@ window.addEventListener('DOMContentLoaded', () => {
       projectContainerRight.classList.add('fadeIn')
     }
 
-    // // NAVBAR FIXED POSITION
-    // if (pagePercentageScrolled >= 0.472) {
-    //   projectNav.classList.add('fixed-nav')
-    // } else {
-    //   projectNav.classList.remove('fixed-nav')
-    // }
-
-    // // PROJECT CARD FADES
-    // if (pagePercentageScrolled >= 0.44) {
-    //   startingTitles[0].classList.add('fadeOut')
-    //   setTimeout(() => {
-    //     startingTitles[0].classList.add('hidden')
-    //     projectCards[0].classList.remove('hidden')
-    //     projectCards[0].classList.add('fadeIn')
-    //   }, 400)
-    // }
-    // if (pagePercentageScrolled >= 0.60) {
-    //   startingTitles[1].classList.add('fadeOut')
-    //   setTimeout(() => {
-    //     startingTitles[1].classList.add('hidden')
-    //     projectCards[1].classList.remove('hidden')
-    //     projectCards[1].classList.add('fadeIn')
-    //   }, 400)
-    // }
-    // if (pagePercentageScrolled >= 0.80) {
-    //   startingTitles[2].classList.add('fadeOut')
-    //   setTimeout(() => {
-    //     startingTitles[2].classList.add('hidden')
-    //     projectCards[2].classList.remove('hidden')
-    //     projectCards[2].classList.add('fadeIn')
-    //   }, 400)
-    // }
-    // if (pagePercentageScrolled >= 0.96) {
-    //   startingTitles[3].classList.add('fadeOut')
-    //   setTimeout(() => {
-    //     startingTitles[3].classList.add('hidden')
-    //     projectCards[3].classList.remove('hidden')
-    //     projectCards[3].classList.add('fadeIn')
-    //   }, 400)
-    // }
-
-    // //NAV TITLE COLORS
-    // switch (true) {
-    //   case pagePercentageScrolled > 0.40 && pagePercentageScrolled < 0.60:
-    //     removeWhiteClasses()
-    //     navTitles[0].classList.add('white')
-    //     break
-    //   case pagePercentageScrolled > 0.60 && pagePercentageScrolled < 0.78:
-    //     removeWhiteClasses()
-    //     navTitles[1].classList.add('white')
-    //     break
-    //   case pagePercentageScrolled > 0.78 && pagePercentageScrolled < 0.97:
-    //     removeWhiteClasses()
-    //     navTitles[2].classList.add('white')
-    //     break
-    //   case pagePercentageScrolled > 0.97:
-    //     removeWhiteClasses()
-    //     navTitles[3].classList.add('white')
-    //     break
-    //   default:
-    //     removeWhiteClasses()
-
-    // }
-
-    // // ICON HOVER COLOR
-    // icons.forEach(icon => {
-    //   icon.addEventListener('mouseover', () => {
-    //     icon.classList.add('colored')
-    //   })
-    //   icon.addEventListener('mouseout', () => {
-    //     icon.classList.remove('colored')
-    //   })
-    // })
-
-    // Carousel
-    // PROJECT CARDS
-    const projectCards = document.querySelectorAll('.project-content')
-    // ARROWS
-    const arrowLeft = document.querySelector('.project-arrow-left')
-    const arrowRight = document.querySelector('.project-arrow-right')
-
-    // NAV TITLES
-    const projectNavTitles = document.querySelectorAll('.project-title-name')
-
-    // CAROUSEL SLIDE NUMBER
-    let currentSlide = 0
-    projectNavTitles[currentSlide].classList.add('color-red')
-    
-    // ADDING CLICK
-    arrowRight.addEventListener('click', () => {
-      projectCards[currentSlide].classList.add('hidden')
-      if (currentSlide === projectCards.length - 1) currentSlide = 0
-      else currentSlide++
-      projectCards[currentSlide].classList.remove('hidden')
-      removeColorRed()
-      projectNavTitles[currentSlide].classList.add('color-red')
-      return currentSlide
-    })
-    arrowLeft.addEventListener('click', () => {
-      projectCards[currentSlide].classList.add('hidden')
-      if (currentSlide === 0) currentSlide = projectCards.length - 1
-      else currentSlide--
-      projectCards[currentSlide].classList.remove('hidden')
-      removeColorRed()
-      projectNavTitles[currentSlide].classList.add('color-red')
-      return currentSlide
-    })
-    // REMOVING COLORS FROM NAV TITLES
-    function removeColorRed() {
-      projectNavTitles.forEach(title => title.classList.remove('color-red'))
-    }
-    // NAV CLICK
-    projectNavTitles.forEach(title => {
-      title.addEventListener('click', () => {
-        removeColorRed()
-        title.classList.add('color-red')
-
-        projectCards.forEach(card => {
-          if (card.id === title.id) {
-            projectCards[currentSlide].classList.add('hidden')
-            currentSlide = Array.from(projectCards).indexOf(card)
-            projectCards[currentSlide].classList.remove('hidden')
-            return currentSlide
-          }
-        })
-      })
-      return currentSlide
-    })
-
-    // BOUNCING ABOUT PAGE ICONS
-    const aboutIcons = document.querySelectorAll('.about-icon')
-    // console.log(aboutIcons)
-
-    aboutIcons.forEach(icon => {
-      icon.addEventListener('mouseover', () => {
-        icon.classList.add('colored')
-        icon.classList.add('bounce')
-        setTimeout(() => {
-          icon.classList.remove('bounce')
-          icon.classList.remove('colored')
-        }, 1000)
-      })
-    })
-
   }) // END OF SCROLL EVENT LISTENER
 
-  // function removeWhiteClasses() {
-  //   navTitles[0].classList.remove('white')
-  //   navTitles[1].classList.remove('white')
-  //   navTitles[2].classList.remove('white')
-  //   navTitles[3].classList.remove('white')
-  // }
+  // CAROUSEL
+  // PROJECT CARDS
+  const projectCards = document.querySelectorAll('.project-content')
+  // ARROWS
+  const arrowLeft = document.querySelector('.project-arrow-left')
+  const arrowRight = document.querySelector('.project-arrow-right')
+
+  // NAV TITLES
+  const projectNavTitles = document.querySelectorAll('.project-title-name')
+
+  // CAROUSEL SLIDE NUMBER
+  let currentSlide = 0
+  projectNavTitles[currentSlide].classList.add('color-red')
+
+  // ADDING CLICK
+  arrowRight.addEventListener('click', () => {
+    projectCards[currentSlide].classList.add('hidden')
+    if (currentSlide === projectCards.length - 1) currentSlide = 0
+    else currentSlide++
+    projectCards[currentSlide].classList.remove('hidden')
+    removeColorRed()
+    projectNavTitles[currentSlide].classList.add('color-red')
+    return currentSlide
+  })
+  arrowLeft.addEventListener('click', () => {
+    projectCards[currentSlide].classList.add('hidden')
+    if (currentSlide === 0) currentSlide = projectCards.length - 1
+    else currentSlide--
+    projectCards[currentSlide].classList.remove('hidden')
+    removeColorRed()
+    projectNavTitles[currentSlide].classList.add('color-red')
+    return currentSlide
+  })
+  // REMOVING COLORS FROM NAV TITLES
+  function removeColorRed() {
+    projectNavTitles.forEach(title => title.classList.remove('color-red'))
+  }
+  // NAV CLICK
+  projectNavTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      removeColorRed()
+      title.classList.add('color-red')
+
+      projectCards.forEach(card => {
+        if (card.id === title.id) {
+          projectCards[currentSlide].classList.add('hidden')
+          currentSlide = Array.from(projectCards).indexOf(card)
+          projectCards[currentSlide].classList.remove('hidden')
+          return currentSlide
+        }
+      })
+    })
+    return currentSlide
+  })
+
+  // BOUNCING ABOUT PAGE ICONS
+  const aboutIcons = document.querySelectorAll('.about-icon')
+
+  aboutIcons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+      icon.classList.add('colored')
+      icon.classList.add('bounce')
+      setTimeout(() => {
+        icon.classList.remove('bounce')
+        icon.classList.remove('colored')
+      }, 1000)
+    })
+  })
 
 }) // END OF SCRIPT
+
+
+// *****NOTES*****
+
+// GENERAL
+// MAY WANT DIVIDERS BETWEEN THE SECTIONS TO BREAK IT UP
+
+// LANDING
+// HAVE GREY LINES ABOVE AND BELOW OF LIKE 10VH OR SOMETHING TO BREAK UP THE PAGE? 
+// ON ARROW CLICK MADE ALL OF LANDING PAGE FADE AWAY BUT HAVE IT REAPPEAR IF YOU SCROLL UP TO IT
+
+// ABOUT
+// HAVE ALL DEV ICONS FADE UP FROM THE RED LINE ONE AFTER ANOTHER LIKE A WAVE
+
+// PROJECTS
+// ADD SWIPING LOOK INTO IMAGES MOVING
+// HAVE THE GREY BEHIND FADE IN ONCE WE ARE IN FOCUS - REMOVE IT WHEN SCROLLING AWAY - IT SHOULD GET DARK AS YOUR SCROLL TOWARDS, LIGHTER AS YOU SCROLL AWAY

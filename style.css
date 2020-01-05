@@ -1,31 +1,13 @@
 /* WEBSITE WIDE */
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* font-family: 'Bebas Neue', cursive; */
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-family: 'Noto Sans KR', sans-serif; */
-  /* font-family: 'Roboto Mono', monospace; */
-  /* font-family: 'Ubuntu', sans-serif; */
-  /* font-family: 'Open Sans', sans-serif; */
-  /* font-family: 'Lato', sans-serif; */
+
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Source Sans Pro', sans-serif; */
-  /* background: #F7FFF7; */
   background: #F5F3F5;
-  /* background: #D5FFD9; */
 }
 
 body, html {
@@ -429,14 +411,6 @@ a {
   width: 93vw;
   /* background: grey; */
   background: none;
-
-  /* display: flex;
-  justify-content: space-evenly;
-  align-items: center; */
-
-  /* background-image: url("https://i.imgur.com/xcLcVuO.jpg");
-  background-size: contain;
-  background-repeat: no-repeat; */
 }
 
 
@@ -530,13 +504,10 @@ a {
 }
 
 .project-content-text h3 {
-  /* position: relative;
-  left: -30%; */
   align-self: flex-start;
   margin: 0 0 1vh 2vw;
   text-decoration: underline;
   text-decoration-color: #DD1C1A;
-  /* text-decoration-thickness: 4px; */
 }
 
 .project-content-text p {
