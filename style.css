@@ -435,7 +435,7 @@ a {
   justify-content: center;
   align-items: center;
 
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.02);
 
   position: relative;
   /* bottom: -10vh; */
@@ -457,7 +457,7 @@ a {
   height: 90vh;
   width: auto;
   /* border: 1px red dashed; */
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.02);
 
   display: flex;
   justify-content: center;
